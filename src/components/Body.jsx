@@ -1,7 +1,22 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Login from "./Login";
+import Header from "./Header";
 
 const Body = () => {
+
+  const appRouter =  createBrowserRouter([
+    {
+      path: "/",
+      element: <Login/>
+    },
+    {
+      path: "/header",
+      element: <Header/>
+    }
+  ])
   return (
-    <div>Body</div>
+    <RouterProvider router={appRouter}>
+    </RouterProvider>
   )
 }
 
