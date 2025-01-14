@@ -1,6 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider} from "react-router-dom"
 import Login from "./Login";
-import Header from "./Header";
+
+import Browse from "./Browse";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Body = () => {
 
@@ -10,10 +12,19 @@ const Body = () => {
       element: <Login/>
     },
     {
-      path: "/header",
-      element: <Header/>
+      path: "/browse",
+      element: (
+        <ProtectedRoute route="/">
+           <Browse/>
+      </ProtectedRoute>
+      ),
+      
     }
-  ])
+  ]);
+
+
+
+
   return (
     <RouterProvider router={appRouter}>
     </RouterProvider>
