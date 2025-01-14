@@ -19,9 +19,7 @@ const useNowPlayingMovies = () => {
       useEffect(() => {
         getNowPlayingMovies();
       }, []);
-      const user = JSON.parse(localStorage.getItem('user'));
-      console.log(user);
-      
+      const user = JSON.parse(localStorage.getItem('user'));      
       
       useEffect(() => {
          onAuthStateChanged(auth, (user) => {

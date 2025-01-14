@@ -40,7 +40,6 @@ const Login = () => {
           displayName: name.current?.value || "", // Safely access name if it's null
           photoURL: USER_AVATAR,
         }); 
-        {console.log("user_url:",USER_AVATAR)}
         dispatch(
           addUser({
             uid: userCredential.user.uid,
