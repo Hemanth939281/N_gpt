@@ -2,12 +2,20 @@ import { LOGO_URL } from "../utils/constant.js";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies.js";
 import MainContainer from "./MainContainer.jsx";
 import SecondaryContainer from "./SecondaryContainer.jsx";
+import usePopularMovies from "../hooks/usePopularMovies.js";
+import useTrendingMovies from "../hooks/useTrendingMovies.js";
+import useUpcomingVideos from "../hooks/useUpcomingMovies.js";
+import useHorrorMovies from "../hooks/useHorrorMovies.js"
 
 const Browse = () => {
   const { user, handleSignOut } = useNowPlayingMovies();
+  usePopularMovies();
+  useTrendingMovies();
+  useUpcomingVideos();
+  useHorrorMovies();
 
   return (
-    <div className="relative">
+    <div className="relative w-screen">
       {/* Header Section */}
       <div className="bg-gradient-to-b from-black via-black/80 h-20 relative z-40">
         {/* Netflix logo */}
