@@ -8,7 +8,6 @@ const useUpcomingMovies = () => {
       const getNowPlayingMovies = async() => {
         const data = await fetch('https://api.themoviedb.org/3/movie/top_rated?page=1', API_OPTIONS);
         const movies = await data.json();
-        console.log(movies.results);
         dispatch(addUpcomingMovies(movies.results));
       }
     

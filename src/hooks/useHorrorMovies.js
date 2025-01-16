@@ -8,7 +8,6 @@ const useHorrorMovies = () => {
       const getNowPlayingMovies = async() => {
         const data = await fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=27`, API_OPTIONS);
         const movies = await data.json();
-        console.log(movies.results);
         dispatch(addHorrorMovies(movies.results));
       }
     
