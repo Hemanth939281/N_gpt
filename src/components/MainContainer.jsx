@@ -9,11 +9,11 @@ const MainContainer = () => {
   const {original_title, overview, id} = mainMovie;
 
   return (
-    <div className="pt-24 relative aspect-video overflow-hidden">
+    <div className="pt-12 md:pt-16 lg:pt-24 relative aspect-video overflow-hidden">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={id} />
     </div>
   )
 }
 
-export default MainContainer
+export default MainContainer;
