@@ -10,9 +10,9 @@ const Search = () => {
         <div className="flex items-center justify-center min-h-1/4 mt-10">
         <div className="w-full max-w-xl">
           <SearchBar />
-          <MovieSuggestions />
         </div>
       </div>
+      <MovieSuggestions />
       </div>
     );
   };

@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addNowPlayingMovies } from "../utils/moviesSlice";
 import { useEffect } from "react";
@@ -8,7 +8,8 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { API_OPTIONS } from "../utils/constant";
 
 const useNowPlayingMovies = () => {
-    const dispatch = useDispatch();
+      const nowPlayingMovies = useSelector((store) => store.movies.nowPlayingMovies);
+      const dispatch = useDispatch();
       const navigate = useNavigate();
       const getNowPlayingMovies = async() => {
         const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1', API_OPTIONS);
@@ -17,7 +18,10 @@ const useNowPlayingMovies = () => {
       }
     
       useEffect(() => {
-        getNowPlayingMovies();
+        if(!nowPlayingMovies){
+          getNowPlayingMovies();
+        }
+        
       }, []);
       const user = JSON.parse(localStorage.getItem('user'));      
       

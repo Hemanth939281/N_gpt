@@ -3,10 +3,11 @@ export const USER_AVATAR = "/assets/user1.png";
 
 export const BG_IMAGE = "https://assets.nflxext.com/ffe/siteui/vlv3/154a9550-ce07-4e28-819c-63185dd849f8/web/IN-en-20250106-TRIFECTA-perspective_27b02e7c-f668-4639-9e82-1a5485084b2a_large.jpg')] bg-center bg-cover"
 export const API_OPTIONS = {
+  api_key: import.meta.env.VITE_TMDB_API_KEY,
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYjM5MTYyODgyMjhjZjFkMTMyMTdlNTY3NzU0Mzc0ZiIsIm5iZiI6MTczNjg3NDExNi45NTcsInN1YiI6IjY3ODY5ODg0YWJhYmJiYTA0MGJiYTdkMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7iMcBXaYB1mphUKypaKA4EqFQa8nkv7ppS9Hdl9GPMA'
+      Authorization: 'Bearer ' + import.meta.env.VITE_TMDB_API_READ
     }
   };
 
@@ -18,3 +19,5 @@ export const SUPPORTED_LANGUAGES = [
   {identifier:'tel', language: 'Telugu'},
   {identifier:'es', language: 'Spanish'}
 ]
+
+export const OPENAI_API_KEY = "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";
