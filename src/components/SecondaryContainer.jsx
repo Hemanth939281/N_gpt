@@ -8,7 +8,7 @@ const SecondaryContainer = () => {
     <div className="bg-black">
       <div className="relative z-20 text-white 
         pb-6 sm:pb-8 md:pb-10 lg:pb-12
-        -mt-16 px-2
+        px-2
         sm:-mt-20 sm:px-4 
         md:-mt-36 md:px-6
         lg:-mt-48 lg:px-8
