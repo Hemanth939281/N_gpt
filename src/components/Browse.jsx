@@ -16,9 +16,9 @@ import { toggleProfile } from "../utils/userSlice.js";
 const Browse = () => {
   const { user, handleSignOut } = useNowPlayingMovies();
   const dispatch = useDispatch();
-  const search = useSelector((store) => store.search.showSearch);
-  const headerBg = useSelector((store) => store.config.headerBgColor);
-  const showProfile = useSelector((store) => store.user.showProfile);
+  const search = useSelector((store) => store.search.showSearch || '');
+  const headerBg = useSelector((store) => store.config.headerBgColor || '');
+  const showProfile = useSelector((store) => store.user.showProfile || '');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   usePopularMovies();
