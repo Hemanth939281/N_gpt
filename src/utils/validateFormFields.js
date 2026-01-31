@@ -4,6 +4,7 @@ export const validateFormFields = (email, password) =>{
     const isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/.test(password);
 
     if (!isEmailValid) return "Email is not valid";
+    if(!isSignInForm && isPasswordValid) return "Please make sure password is Strong. Combination of letters, symbols, numbers etc.";
     if (!isPasswordValid) return "Password is not valid";
     return null;
 
