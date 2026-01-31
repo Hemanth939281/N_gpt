@@ -26,7 +26,8 @@ const Login = () => {
   const validateForm = async () => {
     const message = validateFormFields(
       email.current.value,
-      password.current.value
+      password.current.value,
+      isSignInForm
     );
     seterrorMessage(message);
     if (message) return;
